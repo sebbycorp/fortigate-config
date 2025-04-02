@@ -1,0 +1,76 @@
+[
+  {
+    "policyid": 1,
+    "status": "enable",
+    "name": "nat-internal-out",
+    "srcintf": [
+      {
+        "name": "internal"
+      }
+    ],
+    "dstintf": [
+      {
+        "name": "BELL_35"
+      }
+    ],
+    "action": "accept",
+    "srcaddr": [
+      {
+        "name": "all"
+      }
+    ],
+    "dstaddr": [
+      {
+        "name": "all"
+      }
+    ],
+    "service": [
+      {
+        "name": "ALL"
+      }
+    ],
+    "schedule": "always",
+    "nat": "enable",
+    "logtraffic": "disable",
+    "utm-status": "disable",
+    "ssl-ssh-profile": "certificate-inspection",
+    "profile-protocol-options": "default"
+  },
+  {
+    "policyid": 2,
+    "status": "enable",
+    "name": "corp",
+    "srcintf": [
+      {
+        "name": "corp"
+      }
+    ],
+    "dstintf": [
+      {
+        "name": "BELL_35"
+      }
+    ],
+    "action": "accept",
+    "srcaddr": [
+      {
+        "name": "all"
+      }
+    ],
+    "dstaddr": [
+      {
+        "name": "all"
+      }
+    ],
+    "service": [
+      {
+        "name": "ALL"
+      }
+    ],
+    "schedule": "always",
+    "nat": "enable",
+    "logtraffic": "all",
+    "utm-status": "enable",
+    "ssl-ssh-profile": "no-inspection",
+    "profile-protocol-options": "default"
+  }
+]
